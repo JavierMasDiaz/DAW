@@ -1,0 +1,61 @@
+site_name: Despliegue de Aplicaciones Web
+site_url: https://JavierMasDiaz.github.io/DAW/
+theme:
+  name: material
+  language: es
+  palette:
+    - scheme: default
+      primary: teal
+      accent: teal
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.sections
+    - navigation.expand
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+
+
+nav:
+  - Inicio: index.md
+  - Tema 1:
+      - Teoría: tema1/index.md
+      - Prácticas: tema1/practicas-T1.md
+  - Tema 2:
+      - Teoría: tema2/index.md
+      - Prácticas: tema2/practicas-T2.md
+  - Tema 3:
+      - Teoría: tema3/index.md
+      - Prácticas: tema3/practicas-T3.md    
+  - Tema 4:
+      - Teoría: tema4/index.md
+      - Prácticas: tema4/practicas-T4.md
+  - Tema 5:
+      - Teoría: tema5/index.md
+      - Prácticas: tema5/practicas-T5.md
+  - Tema 6:
+      - Teoría: tema6/index.md
+      - Prácticas: tema6/practicas-T6.md
+  - Tema 7:
+      - Teoría: tema7/index.md
+      - Prácticas: tema7/practicas-T7.md
+
+
+plugins:
+  - search:
+      lang: es
+
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: true
+  - tables
+  - footnotes
+  - def_list
+  - attr_list
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.tasklist:
+      custom_checkbox: true
