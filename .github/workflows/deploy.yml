@@ -3,7 +3,8 @@ name: Deploy MkDocs to GitHub Pages
 on:
   push:
     branches:
-      - main  # Esta es la rama donde trabajarás
+      - main
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -19,7 +20,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install mkdocs ghp-import
+          pip install mkdocs-material ghp-import
 
       - name: Build and deploy
         run: |
