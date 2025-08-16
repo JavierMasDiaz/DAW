@@ -23,6 +23,10 @@ jobs:
           pip install mkdocs-material ghp-import
 
       - name: Build and deploy
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
           mkdocs build
-          ghp-import -n -p site
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
+          ghp-import -n -p site -m "Deploy MkDocs site" -r https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}
